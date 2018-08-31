@@ -4,7 +4,7 @@ import { HashRouter, Link, Switch } from 'react-router-dom';
 import routes from './routes';
 import './App.css';
 import Header from './component/Header/Header';
-import Dashboard from './component/Dashboard/Dashboard';
+// import Dashboard from './component/Dashboard/Dashboard';
 import Form from './component/Form/Form';
 
 
