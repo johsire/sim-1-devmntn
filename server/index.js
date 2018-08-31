@@ -13,7 +13,11 @@ app.use(cors());
 
 // app.use(express.static(`${_dirname}/../public/build`));
 
+massive(process.env.CONNECTION_STRING).then(dbInstance => {
+  app.set('db', dbInstance)
+}).catch(err => console.log(err, 'Error from maasive in the server!'));
+
 const PORT = 5555;
 app.listen(PORT, () => {
-  console.log('Its going down on port:' + ' ' + PORT + '!')
+  console.log('All the magic happens on port:' + ' ' + PORT + '!')
 })
