@@ -8,10 +8,10 @@ class Dashboard extends Component {
     this.state = {
       products: []
     }
-  };
+  }
 
   componentDidMount() {
-    axios.get('/api/inventory')
+    axios.get("/api/inventory")
       .then((res) => {
       this.setState({ products: res.data.inventory })
     })
@@ -20,7 +20,7 @@ class Dashboard extends Component {
   render() {
     const { products } = this.state;
     if (products.length > 0) {
-      return (<Product products={products} title="Our Products" viatu="Timbarandy" />)
+      return (<Product products={products} title="Our Products" />)
     }
     return (<h1>Loading...</h1>)
   }

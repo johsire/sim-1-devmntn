@@ -5,14 +5,15 @@ class Form extends Component {
   constructor(props) {
     super(props)
       this.state = {
-        imageUrl: 'http://dreamstop.com/wp-content/uploads/2013/11/Internet-dream-meaning.jpg',
-        productName: '',
+        imageUrl: 'http://us-test.h2o-at-home.com/images/btn-shop-big.png',
+        // 'http://dreamstop.com/wp-content/uploads/2013/11/Internet-dream-meaning.jpg',
+        productName: 'Shopt Now!',
         priceInput: 0,
       }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleCancel = this.handleCancel.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-  };
+      // this.handleChange = this.handleChange.bind(this)
+      // this.handleCancel = this.handleCancel.bind(this)
+      // this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -41,7 +42,8 @@ class Form extends Component {
       .then(res => {
         // console.log(res.data, 'response from backend');
         this.setState({
-          imageUrl: 'http://dreamstop.com/wp-content/uploads/2013/11/Internet-dream-meaning.jpg',
+          imageUrl: 'http://us-test.h2o-at-home.com/images/btn-shop-big.png',
+          // 'http://dreamstop.com/wp-content/uploads/2013/11/Internet-dream-meaning.jpg',
           productName: '',
           priceInput: '',
         })

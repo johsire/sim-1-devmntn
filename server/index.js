@@ -23,9 +23,6 @@ app.get("/api/inventory", Controller.getAllInventory);
 app.post("/api/product", Controller.create);
 // app.put("/api/inventory", Controller.update);
 
-
-
-
 const PORT = 5555;
 app.listen(PORT, () => {
   console.log('All the magic happens on port:' + ' ' + PORT + '!')

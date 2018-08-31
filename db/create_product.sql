@@ -1,2 +1,2 @@
-INSERT into products (image_url, name, price)
+INSERT into products (imageurl, name, price)
 VALUES ($1, $2, $3) RETURNING *

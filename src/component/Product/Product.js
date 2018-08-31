@@ -1,15 +1,14 @@
 import React from 'react';
 
-function Product({ products, title, viatu }) {
+function Product({ products, title }) {
   return (
     <div>
       {products.map(product => {
         return(
           <div key={product.id}>
-            <h1>{viatu}</h1>
-            <img src={product.image_url} alt={product.name} />
+            <img src={product.imageurl} alt={product.name} />
             <h1>{product.name}</h1>
-            <h4>Price: ${product.price}.00</h4>
+            <h4>Price: ${product.price}</h4>
           </div>
         )
       })}
