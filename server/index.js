@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
 
-const controller = require('./controller/controller');
+const Controller = require('./controller/Controller');
 
 const app = express();
 
@@ -19,9 +19,9 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 
 
 // ENDPOINTS:
-app.get("/api/inventory", inventoryController.getAllInventory);
-app.post("/api/product", inventoryController.create);
-// app.put("/api/inventory", inventoryController.update);
+app.get("/api/inventory", Controller.getAllInventory);
+app.post("/api/product", Controller.create);
+// app.put("/api/inventory", Controller.update);
 
 
 

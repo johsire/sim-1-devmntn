@@ -8,7 +8,7 @@ class Dashboard extends Component {
     this.state = {
       products: []
     }
-  }
+  };
 
   componentDidMount() {
     axios.get('/api/inventory')
