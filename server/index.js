@@ -17,6 +17,15 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
   app.set('db', dbInstance)
 }).catch(err => console.log(err, 'Error from maasive in the server!'));
 
+
+// ENDPOINTS:
+app.get("/api/inventory", inventoryController.getAllInventory);
+app.post("/api/product", inventoryController.create);
+// app.put("/api/inventory", inventoryController.update);
+
+
+
+
 const PORT = 5555;
 app.listen(PORT, () => {
   console.log('All the magic happens on port:' + ' ' + PORT + '!')

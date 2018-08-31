@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -10,11 +9,10 @@ class Form extends Component {
         productName: '',
         priceInput: 0,
       }
-      // NO NEED TO BIND BECAUSE WE USE ARROW FUNCTIONS () =>
-      // this.handleChange = this.handleChange.bind(this)
-      // this.handleCancel = this.handleCancel.bind(this)
-      // this.handleSubmit = this.handleSubmit.bind(this)
-  }
+      this.handleChange = this.handleChange.bind(this);
+      this.handleCancel = this.handleCancel.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  };
 
   handleChange = (e) => {
     this.setState({
