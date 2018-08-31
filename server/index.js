@@ -19,8 +19,14 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 
 
 // ENDPOINTS:
+// GET
 app.get("/api/inventory", Controller.getAllInventory);
+// POST/CREATE
 app.post("/api/product", Controller.create);
+// DELETE
+app.delete('/api/product:id', Controller.delete);
+// PUT/EDIT/UPDATE
+app.put('/api/product/:id',  Controller.update);
 // app.put("/api/inventory", Controller.update);
 
 const PORT = 5555;
