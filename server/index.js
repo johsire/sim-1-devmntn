@@ -24,7 +24,7 @@ app.get("/api/inventory", Controller.getAllInventory);
 // POST/CREATE
 app.post("/api/product", Controller.create);
 // DELETE
-app.delete('/api/product:id', Controller.delete);
+app.delete('/api/product:id', Controller.deleteProduct);
 // PUT/EDIT/UPDATE
 app.put('/api/product/:id',  Controller.update);
 // app.put("/api/inventory", Controller.update);

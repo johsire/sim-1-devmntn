@@ -43,7 +43,7 @@ module.exports = {
       } );
   },
 
-  delete: ( req, res, next ) => {
+  deleteProduct: ( req, res, next ) => {
     const dbInstance = req.app.get('db');
     const { params } = req;
  

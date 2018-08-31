@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Form />
-        <Dashboard  deleteProduct/>
+        <Dashboard  deleteProduct={this.deleteProduct}/>
       </div>
     );
   }

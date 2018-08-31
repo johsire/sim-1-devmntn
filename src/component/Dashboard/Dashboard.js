@@ -8,6 +8,7 @@ class Dashboard extends Component {
     this.state = {
       products: []
     }
+    this.deleteProduct = this.deleteProduct.bind(this);
   }
 
   componentDidMount() {
