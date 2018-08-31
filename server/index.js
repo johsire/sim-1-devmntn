@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use(express.static(`${_dirname}/../public/build`));
+app.use(express.static(`${_dirname}/../public/build`));
 
 massive(process.env.CONNECTION_STRING).then(dbInstance => {
   app.set('db', dbInstance)
