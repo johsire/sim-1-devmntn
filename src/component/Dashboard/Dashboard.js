@@ -17,6 +17,13 @@ class Dashboard extends Component {
     })
   }
 
+  deleteProduct = (id) => {
+    axios.delete(`/api/product/${id}`, {id: id})
+    .then(res => {
+      this.status(200);
+    })
+  };
+
   render() {
     const { products } = this.state;
     if (products.length > 0) {
