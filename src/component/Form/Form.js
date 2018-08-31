@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import styled from 'styled-components';
+
+export const Button = styled.button`
+    background: red;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+`;
+
 class Form extends Component {
   constructor(props) {
     super(props)
       this.state = {
         imageUrl: 'http://us-test.h2o-at-home.com/images/btn-shop-big.png',
         // 'http://dreamstop.com/wp-content/uploads/2013/11/Internet-dream-meaning.jpg',
-        productName: 'Shopt Now!',
+        productName: 'Product Name!',
         priceInput: 0,
       }
       // this.handleChange = this.handleChange.bind(this)
@@ -54,13 +65,22 @@ class Form extends Component {
     // console.log('/api/products');
   }
 
+  updateProduct = (id) => {
+    axios.put(`/api/product/${id}`, {id})
+         .then(res => {
+           this.setState({
+             products: res.data.inventory
+           })
+      })
+  }
+
 
   render() {
     return(
       <div>
-      Image URL: {this.state.imageUrl}<br />
+      {/* Image URL: {this.state.imageUrl}<br />
       Product Name: {this.state.productName}<br />
-      Price: {this.state.priceInput} <br />
+      Price: {this.state.priceInput} <br /> */}
       <img src={this.state.imageUrl} alt="Product" />
       <form onSubmit={e => this.handleSubmit(e)}>
         <br />
@@ -87,11 +107,10 @@ class Form extends Component {
 
         <br />
         <br />
-        <button type="submit">Add to inventory</button> 
-        <br />
-        <br /> 
+        <Button>
+        <button type="submit">Add to inventory</button>
         <button onClick={e => this.handleCancel(e)}>Cancel</button>
-
+        </Button>
       </form>
       </div>
     )}

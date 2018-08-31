@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import Product from '../Product/Product';
 import axios from 'axios';
 
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+	width: 200px;
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+`;
+
 class Dashboard extends Component {
   constructor() {
     super();
